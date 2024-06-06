@@ -1,4 +1,4 @@
-package br.com.alura.codechella.naousar.model;
+package br.com.alura.codechella.infra.persistence;
 
 
 import org.springframework.data.annotation.Id;
@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 
 @Document(collection = "usuarios")
-public class Usuario {
+public class UsuarioEntity {
 
     @Id
     private String id;
@@ -15,6 +15,13 @@ public class Usuario {
     private String nome;
     private LocalDate nascimento;
     private String email;
+
+    public UsuarioEntity(String cpf, String nome, LocalDate nascimento, String email) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.nascimento = nascimento;
+        this.email = email;
+    }
 
     public String getId() {
         return id;
