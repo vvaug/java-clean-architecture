@@ -1,4 +1,4 @@
-package br.com.alura.codechella.model;
+package br.com.alura.codechella.naousar.model;
 
 
 import org.springframework.data.annotation.Id;
